@@ -3,14 +3,18 @@
 }
 
 body {
-    background-color: #dcdad7;
+    color: #474747;
+    font-weight: 400;
+    font-family: Arial,Verdana,Helvetica,Sans-Serif;
+    font-size: 14px;
+    line-height: 20px;
 	&.scroll-hide {
 		overflow: hidden;
 	}
 }
 
 .container {
-    max-width: 1170px;
+    max-width: 1140px;
     margin: 0 auto;
     padding: 0 15px;
 }
