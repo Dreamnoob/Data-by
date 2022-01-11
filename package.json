@@ -40,5 +40,8 @@
     "gulp-uglify-es": "^3.0.0",
     "node-w3c-validator": "^2.0.1",
     "sass": "^1.38.2"
+  },
+  "dependencies": {
+    "gulp-imagemin": "^7.1.0"
   }
 }

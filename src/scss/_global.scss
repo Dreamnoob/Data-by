@@ -3,7 +3,6 @@
 }
 
 body {
-    background-color: #dcdad7;
 	&.scroll-hide {
 		overflow: hidden;
 	}
@@ -61,4 +60,31 @@ body {
         }
     }
 }
+
+
+.button {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        color: #FFFFFF;
+    }
+    &.btn-red {
+        background: #CF0612;
+        &:hover {
+            background: #B4000B;
+        }
+    }
+}
+
+
 

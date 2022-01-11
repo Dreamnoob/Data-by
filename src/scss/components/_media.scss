@@ -1,0 +1,32 @@
+@media (max-width: 991px) {
+    .promo-slider {
+        display: block;
+    }
+    .promo__wrapper {
+        display: none;
+    }
+    .promo {
+        background: none;
+    }
+}
+
+@media (max-width: 660px) {
+    .promo-slider-item__title {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .promo-slider-item__descr {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .promo-slider-item {
+        padding: 60px 15px;
+    }
+    .promo-slider .swiper-button-next,
+    .promo-slider .swiper-button-prev {
+        display: none;
+    }
+    .promo-slider .swiper-pagination {
+        bottom: 15px;
+    }
+}
