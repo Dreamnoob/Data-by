@@ -1,13 +1,13 @@
 * {
-	font-family: "Cuprum", sans-serif;
+    font-family: "Cuprum", sans-serif;
 }
 
 body {
-	&.scroll-hide {
-		@media(max-width:1023px) {
+    &.scroll-hide {
+        @media(max-width:1023px) {
             overflow: hidden;
         }
-	}
+    }
 }
 
 .container {
@@ -26,10 +26,12 @@ body {
     padding: 12px 0 24px;
     position: relative;
     z-index: 5;
+
     &__item {
         display: inline-block;
         padding-right: 24px;
         position: relative;
+
         a,
         span {
             font-weight: 400;
@@ -38,18 +40,23 @@ body {
             color: #777;
             transition: all .3s;
         }
+
         a {
             text-decoration: underline;
+
             &:hover {
                 text-shadow: .5px 0 0 currentColor;
             }
         }
+
         span {
             color: #1b1b1b;
         }
+
         &:last-child::after {
             display: none;
         }
+
         &::after {
             position: absolute;
             content: url('../img/arrow-ba.svg');
@@ -73,11 +80,14 @@ body {
     align-items: center;
     width: fit-content;
     transition: all 0.3s ease-in-out;
+
     &:hover {
         color: #FFFFFF;
     }
+
     &.btn-red {
         background: #CF0612;
+
         &:hover {
             background: #B4000B;
         }
@@ -93,6 +103,7 @@ body {
     margin-bottom: 30px;
     position: relative;
     z-index: 2;
+
     &::before {
         position: absolute;
         content: '';
@@ -104,13 +115,25 @@ body {
         z-index: -1;
         opacity: 0.5;
     }
+
     span {
         background: #fff;
         display: inline-block;
         padding: 0 15px 0 0;
         z-index: 2;
     }
+
+    &--no-line::before {
+        display: none;
+    }
 }
 
+.p {
+    margin: 3px 0 9px;
 
-
+    @include font-family;
+    color: #474747;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
