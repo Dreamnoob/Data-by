@@ -4,7 +4,9 @@
 
 body {
 	&.scroll-hide {
-		overflow: hidden;
+		@media(max-width:1023px) {
+            overflow: hidden;
+        }
 	}
 }
 

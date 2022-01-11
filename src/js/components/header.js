@@ -19,6 +19,8 @@ function toggleMenu() {
         nav.classList.add('active');
         navBackground.classList.add('active');
         closeNav.classList.add('active');
+
+        document.body.classList.add('scroll-hide');
     });
 
     navBackground.addEventListener('click', () => {
@@ -26,6 +28,8 @@ function toggleMenu() {
         nav.classList.remove('active');
         burger.classList.remove('active');
         closeNav.classList.remove('active');
+
+        document.body.classList.remove('scroll-hide');
     });
 
     closeNav.addEventListener('click', () => {
@@ -33,27 +37,16 @@ function toggleMenu() {
         nav.classList.remove('active');
         burger.classList.remove('active');
         closeNav.classList.remove('active');
+
+        document.body.classList.remove('scroll-hide');
     });
 }
 
-function toggleSubnav() {
+function toggleNav() {
     const navList = document.querySelector('.nav__list');
     const navItems = document.querySelectorAll('.nav__item.active');
     const subnavItems = document.querySelectorAll('.subnav__item.active');
     const submenuItems = document.querySelectorAll('.submenu__item.active');
-
-    function toggleItems(i, elements, parent) {
-        let list = document.querySelectorAll(elements);
-
-        if (list[i].classList.contains('active')) {
-            list[i].classList.remove('active');
-            list[i].style.maxHeight = 0;
-        } else {
-            list[i].classList.add('active');
-            list[i].style.maxHeight = list[i].scrollHeight + "px";
-
-        }
-    }
 
     navList.addEventListener('click', (e) => {
         const target = e.target;
@@ -121,7 +114,33 @@ function toggleSubnav() {
     });
 }
 
+function headerFixed() {
+    const header = document.querySelector('.header');
+    const headerTop = document.querySelector('.header__top');
+    const page = document.querySelector('.page');
+
+    page.style.paddingTop = header.scrollHeight + "px";
+
+    window.addEventListener('scroll', function () {
+        if (pageYOffset >= headerTop.scrollHeight) {
+            header.style.transform = `translateY(-${headerTop.scrollHeight}px)`;
+
+        } else {
+            header.style.transform = `translateY(${0}px)`;
+        }
+    });
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth <= 1023) {
+            page.style.paddingTop = headerTop.scrollHeight + "px";
+        } else {
+            page.style.paddingTop = header.scrollHeight + "px";
+        }
+    });
+}
+
 
 toggleInfo();
 toggleMenu();
-toggleSubnav();
+toggleNav();
+headerFixed();
