@@ -1,7 +1,7 @@
 .promo {
     background: url('../img/promo-bg.jpg') center (center / cover) no-repeat;
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 0 auto 45px auto;
     height: 475px;
 }
 
@@ -178,7 +178,7 @@
     height: 0;
     opacity: 0;
     border-bottom: 4px solid #c90a0a00;
-    z-index: 20;
+    z-index: 200;
     visibility: hidden;
 }
 
