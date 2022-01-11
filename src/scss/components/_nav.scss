@@ -1,5 +1,4 @@
 .header__bottom {
-    margin-top: 15px;
     height: 50px;
     padding: 1px 0 0;
 
@@ -31,7 +30,7 @@
     }
 
     @media(max-width:576px) {
-        width: 85%;
+        width: 85vw;
     }
 
     &.active {
@@ -355,7 +354,7 @@
     top: 0;
     bottom: 0;
 
-    background: url(../img/bg-sub.png) repeat-y;
+    background: #fff url(../img/bg-sub.png) repeat-y;
     border-left: 1px dotted #b8b8b8;
     border-radius: 0 0 3px 0px;
     box-shadow: 0 3px 4px #a1a0a0;
@@ -496,7 +495,7 @@
     top: 0;
     bottom: 0;
 
-    background: url(../img/bg-sub.png) repeat-y;
+    background: #fff url(../img/bg-sub.png) repeat-y;
     border-left: 1px dotted #b8b8b8;
     border-radius: 0 0 3px 0px;
     box-shadow: 0 3px 4px #a1a0a0;

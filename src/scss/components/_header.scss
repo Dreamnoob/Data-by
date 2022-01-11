@@ -1,9 +1,24 @@
 .header {
+    position: fixed;
+    top: 0;
+    z-index: 19;
+
+    width: 100%;
+    transition: .3s linear;
+
     background: url(../img/header-bg.png);
     background-size: 100% 100%;
 
     @media(max-width:1023px) {
         background: #e6e6e6;
+    }
+}
+
+.header__top {
+    padding-bottom: 15px;
+
+    @media(max-width:1023px) {
+        padding-bottom: 0;
     }
 }
 
