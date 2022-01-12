@@ -10,8 +10,31 @@
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 0 3px #ccc;
-    margin-right: 25px;
+    margin-right: 35px;
     height: fit-content;
+}
+
+.page-nav-v2 {
+    .page-nav__item {
+        &:hover {
+            a {
+                background-color: #fff;
+                color: #e30613;
+                border-left: 4px solid #e30613;
+            }
+        }
+        &.active {
+            a {
+                background-color: #fff;
+                color: #e30613;
+                border-left: 4px solid #e30613;
+            }
+        }
+        a {
+            background-color: #fff;
+            border-left: 4px solid transparent;
+        }
+    }
 }
 
 .sub-page-nav {
@@ -162,5 +185,5 @@
 }
 
 .page-wrap-body {
-    width: calc(100% - 270px);
+    width: calc(100% - 280px);
 }

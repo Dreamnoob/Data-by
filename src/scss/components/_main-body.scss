@@ -151,6 +151,7 @@
 
 
 .block-text.block-text-v2 {
+    margin-bottom: 40px;
     h2 {
         font-size: 24px;
         font-weight: 700;
@@ -185,6 +186,10 @@
             left: -17px;
             top: 7px;
         }
+    }
+    b {
+        font-weight: 700;
+        @include font-family;
     }
 }
 
