@@ -6,6 +6,17 @@ function toggleInfo() {
         infoMob.classList.toggle('active');
         headerContacts.classList.toggle('active');
     });
+
+
+    document.addEventListener('click', (e) => {
+        const withinBoundaries = e.composedPath().includes(headerContacts);
+        const withinBoundaries2 = e.composedPath().includes(infoMob);
+
+        if (!withinBoundaries && !withinBoundaries2) {
+            infoMob.classList.remove('active');
+            headerContacts.classList.remove('active');
+        }
+    });
 }
 
 function toggleMenu() {
@@ -122,7 +133,7 @@ function headerFixed() {
     page.style.paddingTop = header.scrollHeight + "px";
 
     window.addEventListener('scroll', function () {
-        if (pageYOffset >= headerTop.scrollHeight) {
+        if (pageYOffset >= headerTop.scrollHeight && window.innerWidth >= 1024) {
             header.style.transform = `translateY(-${headerTop.scrollHeight}px)`;
 
         } else {

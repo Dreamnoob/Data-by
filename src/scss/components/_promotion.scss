@@ -18,11 +18,24 @@
     flex-wrap: wrap;
     align-items: center;
     margin: 0 -3px;
+
+    @media(max-width:576px) {
+        margin: 0;
+    }
 }
 
 .promotion__item {
     width: calc(100% / 3 - 6px);
     margin: 0 3px 45px;
+
+    @media(max-width:870px) {
+        width: calc(100% / 2 - 6px);
+    }
+
+    @media(max-width:576px) {
+        width: 100%;
+        margin: 0 0 45px;
+    }
 }
 
 .promotion__link {
@@ -49,7 +62,9 @@
     img {
         display: block;
         width: 100%;
+        max-width: 260px;
         max-height: 145px;
+        margin: 0 auto;
         object-fit: cover;
     }
 }
@@ -95,7 +110,7 @@
 
     &:hover {
         @media(min-width:1024px) {
-         opacity: .8;
+            opacity: .8;
         }
     }
 }

@@ -196,6 +196,24 @@
             background-position: -19px 0;
         }
     }
+
+    &.nav__link-active {
+        background-color: #cd0a0a;
+        color: #fff;
+        text-shadow: 1px 1px 2px #000;
+
+        &::before {
+            background-position: -9px 0;
+
+            @media(max-width:1023px) {
+                transform: rotate(-90deg);
+            }
+        }
+
+        &.open::before {
+            transform: rotate(0deg);
+        }
+    }
 }
 
 .nav__link--promotion {
