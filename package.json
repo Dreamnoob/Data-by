@@ -42,6 +42,7 @@
     "sass": "^1.38.2"
   },
   "dependencies": {
-    "gulp-imagemin": "^7.1.0"
+    "gulp-imagemin": "^7.1.0",
+    "lightgallery.js": "^1.4.0"
   }
 }
