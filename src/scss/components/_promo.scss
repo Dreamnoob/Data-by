@@ -287,7 +287,10 @@
 
 
 .promo-slider {
-    display: none;
+    display: block;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
     .swiper-button-next,
     .swiper-button-prev {
         width: 30px;
@@ -317,12 +320,34 @@
     .swiper-pagination-bullet-active {
         background-color: #fff;
     }
+    .swiper {
+        z-index: 2;
+    }
+    /* .container-nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        max-width: 1140px;
+        width: 100%;
+        top: 0;
+        z-index: 2;
+    } */
+}
+
+.promo-slider__main {
+    display: none;
+    margin-bottom: 0;
 }
 
 .promo-slider-item {
-    padding: 110px 70px;
     position: relative;
     z-index: 2;
+    .container {    
+        padding: 110px 70px;
+        z-index: 22;
+        position: relative;
+    }
 }
 
 .promo-slider-item__img {
